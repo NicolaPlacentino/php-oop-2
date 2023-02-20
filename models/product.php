@@ -1,4 +1,6 @@
 <?php 
+require_once __DIR__ '/animal.php'
+
 class Product{
     public $title;
     public $description;
