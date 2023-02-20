@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ '/animal.php'
+require_once __DIR__ '/Animal.php'
 
 class Product{
     public $title;
