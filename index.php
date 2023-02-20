@@ -18,9 +18,13 @@ icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto,
     $fish = new Animal('pesci', 'https://cdn-icons-png.flaticon.com/128/9217/9217800.png');
 
 
-    $toy_bone = new Product('osso', 'Lorem ipsum', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQOO5zqXXp4li2ktQigiM2jqLjmxbiXRoQw&usqp=CAU', $dog, 7, 'Giocattoli');
+    $toy_bone = new Product('Osso giocattolo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQOO5zqXXp4li2ktQigiM2jqLjmxbiXRoQw&usqp=CAU', $dog, 5, 'Giocattoli');
+    $cat_medicine = new Product('Integratori per gatti', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'https://assets.petco.com/petco/image/upload/f_auto,q_auto/3441830-center-1', $cat, 10, 'Salute e igiene');
+    $fish_food = new Product('Mangime per pesci', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'https://i5.walmartimages.com/asr/01d10ef8-466b-4a1e-9c7e-237e26d4dc41_1.9a225c4144d51f7580b992915c63302d.jpeg', $fish, 3, 'Alimenti');
+    $bird_perch = new Product('Trespolo per uccelli', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'https://img.joomcdn.net/83b05cea3d09159119b360deec54a7e26d02ba29_1024_1024.jpeg', $bird, 7, 'Giocattoli');
 
-    $products = [$toy_bone]
+
+    $products = [$toy_bone, $cat_medicine, $fish_food, $bird_perch]
 ?>
 
 <!DOCTYPE html>
