@@ -6,7 +6,7 @@ class Food extends Product{
     public $ingredients;
 
 
-    public function __construct($name, array $ingredients){
+    public function __construct($title, $description, $img, $animal, $category, $name, array $ingredients){
         $this->name = $name;
         $this->ingredients = $ingredients
     }
