@@ -6,6 +6,6 @@ class Animal{
 
     public function __construct($name, $icon){
         $this->name = $name;
-        $this->icon = $icon
+        $this->icon = $icon;
     }
 }

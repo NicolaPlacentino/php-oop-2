@@ -7,6 +7,20 @@ icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto,
 
 <?php 
     require_once __DIR__ . '/Models/Product.php';
+    require_once __DIR__ . '/Models/Animal.php';
+    require_once __DIR__ . '/Models/Food.php';
+    require_once __DIR__ . '/Models/Toy.php';
+    require_once __DIR__ . '/Models/Health_and_hygiene.php';
+
+    $dog = new Animal('cane', 'https://cdn-icons-png.flaticon.com/512/620/620851.png');
+    $cat = new Animal('gatto', 'https://cdn-icons-png.flaticon.com/512/220/220124.png');
+    $bird = new Animal('uccelli', 'https://cdn-icons-png.flaticon.com/512/2622/2622068.png');
+    $fish = new Animal('pesci', 'https://cdn-icons-png.flaticon.com/128/9217/9217800.png');
+
+
+    $toy_bone = new Product('osso', 'Lorem ipsum', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQOO5zqXXp4li2ktQigiM2jqLjmxbiXRoQw&usqp=CAU', $dog, 7, 'Giocattoli');
+
+    $products = [$toy_bone]
 ?>
 
 <!DOCTYPE html>
@@ -27,26 +41,26 @@ icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto,
 <div class="container py-4">
     <div class="row row-cols-4">
 
-        <?php for($i = 0; $i < 8; $i++) : ?>
+        <?php foreach($products as $product) : ?>
             <div class="col mb-5">
                 <div class="card" style="width: 18rem;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQOO5zqXXp4li2ktQigiM2jqLjmxbiXRoQw&usqp=CAU" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">Card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <img src="<?= $product->img ?>" class="card-img-top" alt="...">
+                    <div class="card-body pb-0">
+                        <h4 class="card-title"><?= $product->title ?></h4>
+                        <p class="card-text"><?= $product->description ?></p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <h5>Price</h5>
-                                <p>Category</p>
+                                <h5>€<?= $product->price ?></h5>
+                                <p><?= $product->category ?></p>
                             </div>
-                            <div class="text-center pe-3">
-                                <span class="fs-1"><i class="fa-solid fa-dog"></i></span>
+                            <div class="text-center w-50 p-4">
+                                <img src="<?= $product->animal->icon ?>" alt="<?= $product->animal->name ?>" class="img-fluid p-2">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <?php endfor; ?>
+        <?php endforeach; ?>
 
     </div>
 </div>
