@@ -1,7 +1,7 @@
 <?php 
 require_once __DIR__ . '/Product.php';
 
-class Health_and_hygiene extends Product{
+class HealthAndHygiene extends Product{
     public $use_instructions;
     public $is_medicine;
 

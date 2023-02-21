@@ -10,7 +10,7 @@ icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto,
     require_once __DIR__ . '/Models/Animal.php';
     require_once __DIR__ . '/Models/Food.php';
     require_once __DIR__ . '/Models/Toy.php';
-    require_once __DIR__ . '/Models/Health_and_hygiene.php';
+    require_once __DIR__ . '/Models/HealthAndHygiene.php';
 
     $dog = new Animal('cane', 'https://cdn-icons-png.flaticon.com/512/620/620851.png');
     $cat = new Animal('gatto', 'https://cdn-icons-png.flaticon.com/512/220/220124.png');
